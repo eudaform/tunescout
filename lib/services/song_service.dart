@@ -20,8 +20,7 @@ class SongService {
           }));
       DeezerSongModel result = DeezerSongModel.fromJson(response.data);
       return result;
-    } on DioException {
-      //print(e.error);
+    } on DioException catch (e) {
       rethrow;
     }
   }

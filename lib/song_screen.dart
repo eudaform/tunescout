@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tunescout_project/services/models/deezer_song_model.dart';
+import 'services/models/deezer_song_model.dart';
 
 class SongScreen extends StatelessWidget {
   final DeezerSongModel song;
@@ -40,7 +40,7 @@ class SongScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Expanded(
-                            child: Text(song?.title ?? '',
+                            child: Text(song.title,
                                 // overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
                                     color: Colors.white,
@@ -53,7 +53,7 @@ class SongScreen extends StatelessWidget {
                     const SizedBox(
                       height: 5,
                     ),
-                    Text(song?.artist?.name ?? '',
+                    Text(song.artist.name,
                         style: const TextStyle(color: Colors.white, fontSize: 15))
                   ],
                 ),

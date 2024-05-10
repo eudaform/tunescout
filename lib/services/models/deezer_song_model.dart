@@ -9,7 +9,7 @@ DeezerSongModel deezerSongModelFromJson(String str) => DeezerSongModel.fromJson(
 String deezerSongModelToJson(DeezerSongModel data) => json.encode(data.toJson());
 
 class DeezerSongModel {
-  String id;
+  int id;
   bool readable;
   String title;
   String titleShort;
@@ -17,10 +17,10 @@ class DeezerSongModel {
   String isrc;
   String link;
   String share;
-  String duration;
+  int duration;
   int trackPosition;
   int diskNumber;
-  String rank;
+  int rank;
   DateTime releaseDate;
   bool explicitLyrics;
   int explicitContentLyrics;
@@ -121,7 +121,7 @@ class DeezerSongModel {
 }
 
 class Album {
-  String id;
+  int id;
   String title;
   String link;
   String cover;
@@ -181,7 +181,7 @@ class Album {
 }
 
 class Artist {
-  String id;
+  int id;
   String name;
   String link;
   String share;

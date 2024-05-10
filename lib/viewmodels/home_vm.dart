@@ -35,7 +35,7 @@ class HomeViewModel extends ChangeNotifier {
     final metaData = song.metadata;
     if (metaData != null && metaData.music?.length != null
         && metaData.music!.isNotEmpty) {
-      final trackId = metaData.music?[0].externalMetadata?.deezer?.track?.id;
+      final trackId = metaData.music?[0].externalMetadata?.deezer?.track?.id; //TODO
       try {
         final res = await songService.getTrack(trackId);
         currentSong = res;
