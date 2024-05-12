@@ -21,6 +21,10 @@ class MyApp extends StatelessWidget {
           // This makes the visual density adapt to the platform that you run
           // the app on. For desktop platforms, the controls will be smaller and
           // closer together (more dense) than on mobile platforms.
+          primaryColor: const Color.fromRGBO(50, 65, 85, 1),
+          textTheme: const TextTheme(
+              displaySmall: TextStyle(color: Colors.white),
+          ),
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: const HomePage());

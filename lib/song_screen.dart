@@ -35,7 +35,7 @@ class SongScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 100,
                       child: Column(
                         children: [

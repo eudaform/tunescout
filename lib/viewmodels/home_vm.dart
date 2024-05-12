@@ -31,11 +31,10 @@ class HomeViewModel extends ChangeNotifier {
   }
 
   void searchSong(SongModel song) async {
-    //print(song);
     final metaData = song.metadata;
     if (metaData != null && metaData.music?.length != null
         && metaData.music!.isNotEmpty) {
-      final trackId = metaData.music?[0].externalMetadata?.deezer?.track?.id; //TODO
+      final trackId = metaData.music?[0].externalMetadata?.deezer?.track?.id;
       try {
         final res = await songService.getTrack(trackId);
         currentSong = res;
